@@ -148,17 +148,8 @@ void plotta(int n){
 	fprintf(file,"\n set samples %d;",n);
  	fprintf(file,"\n set xrange[%d:%d];",0,n);
 // 	fprintf(file,"\n set yrange[%d:%d];",0,230);
-  //	fprintf(file,"\n set title 'Preda-predatore con et‡';");
+  //	fprintf(file,"\n set title 'Preda-predatore con et√†';");
 	fprintf(file,"\n plot 'dati_funzione.txt' u 1:2 with linespoints lw 2 lc rgb 'red' pt 7 ps 0.8 title 'Predatori maturi', 'dati_funzione.txt' u 1:3 with linespoints lw 2 lc rgb 'blue' pt 7 ps 0.8 title 'Predatori immaturi', 'dati_funzione.txt' u 1:4 with linespoints lw 2 lc rgb 'green' pt 7 ps 0.8 title 'Prede'");
 	fclose(file);
 	system("wgnuplot -persist comandi.txt");
 }
-
-
-
-
-
-
-
-
-
